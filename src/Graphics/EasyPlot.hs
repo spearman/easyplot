@@ -42,7 +42,7 @@
 --
 -- > plot' [Debug] X11 $ Gnuplot3D [Color Magenta] [] "x ** 4 + y ** 3"
 -- > > set term x11 persist; splot x ** 4 + y ** 3 lc rgb "magenta"
-module EasyPlot (
+module Graphics.EasyPlot (
 
     -- * Plotting
     Plot (plot, plot'),
@@ -61,7 +61,7 @@ module EasyPlot (
 import Numeric (showHex)
 import Data.Char (toUpper)
 import Data.List (sortBy, nubBy)
-import System.Cmd (rawSystem)
+import System.Process (rawSystem)
 import System.Exit (ExitCode (ExitSuccess))
 
 -- | TerminalType determines where the output of gnuplot should go.
